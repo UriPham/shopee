@@ -1,0 +1,234 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        top: 0px;
+    }
+
+    .header__cart-list  {
+        position: fixed;
+        top: var(--header-height);
+        right: 0px;
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header__cart-list::before {
+        display: none;
+    }
+
+    .app__container {
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+
+    .header__sort-bar {
+        display: flex;
+    }
+
+    .app__content {
+        padding-top: 8px;
+    }
+
+    .mobile-category {
+        display: block;
+    }
+
+
+}
+ /* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+
+    .hide-on-tablet {
+        display: none;
+    }
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+}
+
+/* Mobile */
+@media (max-width: 730px) {
+
+    :root {
+        --header-height: 54px;
+        --navbar-height: 0px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header-with-search {
+        justify-content: space-between;
+    }
+
+    .header__cart,
+    .header__logo {
+        width: unset;
+    }
+
+    .header__search-checkbox:checked ~ .header__search {
+        display: flex;
+    }
+
+    .header__search {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+        padding: 0 16px;
+        animation: mobileSearchSideIn linear 0.3s;
+        display: none;
+    }
+
+    .header__mobile-search {
+        display: block;
+    }
+    
+    .header__mobile-search-icon {
+        display: block;
+        font-size: 2.6rem;
+        color: var(--white-color);
+    }
+
+    .header__search-history {
+        position: fixed;
+        width: 100%;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        left: 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            height: 0;
+            /* top: calc(var(--header-height) / 2); */
+        }
+        to {
+            opacity: 1;
+            height: 46px;
+            /* top: var(--header-height); */
+        }
+    }
+
+    .header__mobile-left {
+        display: flex;
+    }
+
+    .header__mobile-sign-in {
+        display: block;
+        position: relative;
+        top: 5px;
+    }
+
+    .header__mobile-sign-in-icon {
+        font-size: 2.6rem;
+        display: block;
+        color: var(--white-color);
+        margin: 0 5px;
+        display: block;
+    }
+
+    .header__sign-in-btn {
+        position: fixed;
+        background-color: var(--white-color);
+        left: 0;
+        width: 100%;
+        padding: 20px 15px;
+        top: 80%;
+        animation: mobileSignInSideIn linear 0.5s;
+        z-index: 1;
+        display: none;
+    }
+
+    .header__sign-in-checkbox:checked ~ .header__sign-in-btn {
+        display: flex;
+    }
+
+    .header__sign-in-checkbox:checked ~ .header__mobile-left .header__mobile-sign-in {
+        display: flex;
+    }
+
+    /* .header__sign-in-btn:hover {
+        background-color: rgba(239, 237, 237, 237);
+    }
+
+    .header__sign-in-btn:hover .header__sign-in-item {
+        color: var(--primary-color);
+    } */
+
+    .header__sign-in-item {
+        position: absolute;
+        display: block;
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    @keyframes mobileSignInSideIn {
+        from {
+            opacity: 0;
+            /* transform: translateX(-100%); */
+            left: -20px;
+
+        }
+
+        to {
+            opacity: 1;
+            /* transform: translateX(0%); */
+            left: 0;
+        }
+    }
+
+    .pagination-item__link {
+        min-width: 36px;
+        height: 28px;
+        font-size: 1.6rem;
+    }
+
+    .pagination-item {
+        margin: 0px;
+    }
+
+    .app__content {
+        margin: 0 2px;
+    }
+
+    .header__logo-img {
+        width: 110px;
+    }
+    
+    .footer__content {
+        padding: 0 16px;
+    }
+
+    .footer__heading {
+        text-align: center;
+    }
+    
+    .footer__download,
+    .footer-item__link {
+        justify-content: center;
+    }
+
+    .footer__download-apps {
+        flex: unset;
+    }
+}
